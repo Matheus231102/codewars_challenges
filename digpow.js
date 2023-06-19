@@ -21,7 +21,6 @@ function digPow(n, p) {
     for (let index = 0; index < arrayOfN.length; index++) {
         sum += arrayOfN[index] ** (p + index)
     }
-    // math -> sum = n * k"  
     const kNumber = sum / n
 
     return (kNumber % 1 === 0) ? kNumber : -1; 
