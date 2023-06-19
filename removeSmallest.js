@@ -6,25 +6,14 @@ Don't change the order of the elements that are left.
 
 function removeSmallest(array) {
     if (array.length === 0) { return [] }
-    let minimal;
-    let arraySub = [...array]
 
-    arraySub.forEach((element, index) => {
-        if (index === 0) {
-            minimal = element
-        } else {
-            if (element < minimal) {
-                minimal = element
-            } else {
-                return;
-            }
-        }
-    })
+    let arrayCopy = [...array]
 
-    for (let index in arraySub) {
-        if (arraySub[index] === minimal) {
-            arraySub.splice(index, 1)
-            return arraySub
+    for (let index in arrayCopy) {
+        if (arrayCopy[index] === Math.min(...array)) {
+            arrayCopy.splice(index, 1)
+            return arrayCopy
         }
     }
 }
+
