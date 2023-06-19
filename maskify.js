@@ -12,3 +12,4 @@
 function maskify(string) {
     return string.slice(0, string.length - 4).replace(/./g, `*`) + cc.slice(-4)
 }
+ 
